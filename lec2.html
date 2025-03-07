@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking Lab – Lecture 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            margin: 20px;
+
+
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+       
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 shadow-lg">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h1 class="text-4xl font-bold">Ethical Hacking Lab – Lecture 2</h1>
+            <p class="text-xl mt-2 opacity-90">Eng, Nour sallam</p>
+            <p class="opacity-80">2024-2025</p>
+        </div>
+
+
+        <div class="container mx-auto max-w-5xl px-4 m-7">
+            <a href="lec1.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L01:</span>
+            </a>
+            <a href="lec2.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L02:</span> 
+            </a>
+            <a href="lec3.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L03:</span> 
+                
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-2xl font-bold text-blue-800">Table of Content</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <a href="#footprinting" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">1.</span> Explain Footprinting Concepts
+                    <p class="text-sm text-gray-600">(شرح مفاهيم البصمة الرقمية)</p>
+                </a>
+                <a href="#search-engines" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">2.</span> Demonstrate Footprinting through Search Engines
+                    <p class="text-sm text-gray-600">(إظهار البصمة الرقمية عبر محركات البحث)</p>
+                </a>
+                <a href="#ghdb" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">3.</span> Google Hacking Database (GHDB)
+                    <p class="text-sm text-gray-600">(قاعدة بيانات القرصنة باستخدام جوجل)</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-5xl px-4 py-10">
+        <!-- Footprinting Section -->
+        <section id="footprinting" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">1. Explain Footprinting Concepts</h2>
+                <p class="text-sm opacity-80">(شرح مفاهيم البصمة الرقمية)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">What is Footprinting?</h3>
+                    <p class="text-sm text-gray-600">(ما هي البصمة الرقمية؟)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Passive Footprinting</h4>
+                            <p>Gathering information without interacting directly with the target (e.g., public records).</p>
+                            <p class="mt-2 text-sm text-gray-600">(جمع المعلومات دون التفاعل المباشر مع الهدف، مثل السجلات العامة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Active Footprinting</h4>
+                            <p>Involves direct interaction with the target, such as sending queries to systems.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يتضمن التفاعل المباشر مع الهدف، مثل إرسال استعلامات إلى الأنظمة)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Information Obtained in Footprinting</h3>
+                    <p class="text-sm text-gray-600">(المعلومات التي يتم الحصول عليها في البصمة الرقمية)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Organization Information</h4>
+                            <p>Details about employees, telephone numbers, branch locations, technologies used, and public-facing documents.</p>
+                            <p class="mt-2 text-sm text-gray-600">(تفاصيل عن الموظفين وأرقام الهواتف ومواقع الفروع والتقنيات المستخدمة والمستندات العامة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Network Information</h4>
+                            <p>Domain names, sub-domains, network topology, IP addresses, routers, and DNS records.</p>
+                            <p class="mt-2 text-sm text-gray-600">(أسماء النطاقات والنطاقات الفرعية وبنية الشبكة وعناوين IP والموجهات وسجلات DNS)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">System Information</h4>
+                            <p>Web server OS, server locations, public email addresses, usernames, and passwords.</p>
+                            <p class="mt-2 text-sm text-gray-600">(نظام تشغيل الخادم ومواقع الخوادم وعناوين البريد الإلكتروني العامة وأسماء المستخدمين وكلمات المرور)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Footprinting Methodology</h3>
+                    <p class="text-sm text-gray-600">(منهجية البصمة الرقمية)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Search Engines</h4>
+                            <p>Using advanced search techniques to locate sensitive data.</p>
+                            <p class="mt-2 text-sm text-gray-600">(استخدام تقنيات البحث المتقدمة لتحديد البيانات الحساسة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Web Services</h4>
+                            <p>Extracting metadata and information from web services.</p>
+                            <p class="mt-2 text-sm text-gray-600">(استخراج البيانات الوصفية والمعلومات من خدمات الويب)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Social Networking</h4>
+                            <p>Analyzing social media profiles and interactions.</p>
+                            <p class="mt-2 text-sm text-gray-600">(تحليل ملفات التواصل الاجتماعي والتفاعلات)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Website Footprinting</h4>
+                            <p>Examining website structures and extracting metadata.</p>
+                            <p class="mt-2 text-sm text-gray-600">(فحص هياكل المواقع واستخراج البيانات الوصفية)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Email Footprinting</h4>
+                            <p>Tracking email communication and analyzing headers.</p>
+                            <p class="mt-2 text-sm text-gray-600">(تتبع اتصالات البريد الإلكتروني وتحليل الرؤوس)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">DNS Footprinting</h4>
+                            <p>Interrogating DNS records to gather information about domain architecture.</p>
+                            <p class="mt-2 text-sm text-gray-600">(استجواب سجلات DNS لجمع المعلومات حول بنية النطاق)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Engines Section -->
+        <section id="search-engines" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">2. Demonstrate Footprinting through Search Engines</h2>
+                <p class="text-sm opacity-80">(إظهار البصمة الرقمية عبر محركات البحث)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">What is Google Hacking?</h3>
+                    <p class="text-sm text-gray-600">(ما هي القرصنة باستخدام جوجل؟)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Google hacking is used to extract sensitive or hidden information by leveraging advanced search operators.</p>
+                        <p class="mt-2 text-sm text-gray-600">(تستخدم القرصنة باستخدام جوجل لاستخراج المعلومات الحساسة أو المخفية باستخدام مشغلات البحث المتقدمة)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Popular Advanced Search Operators</h3>
+                    <p class="text-sm text-gray-600">(مشغلات البحث المتقدمة الشائعة)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">[cache:]</h4>
+                            <p>Displays the web pages stored in Google’s cache.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يعرض صفحات الويب المخزنة في ذاكرة التخزين المؤقت لجوجل)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">[link:]</h4>
+                            <p>Lists web pages that link to a specified web page.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يسرد صفحات الويب التي ترتبط بصفحة ويب محددة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">[related:]</h4>
+                            <p>Finds web pages similar to a given web page.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يجد صفحات ويب مشابهة لصفحة ويب معينة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">[site:]</h4>
+                            <p>Restricts search results to websites within a specific domain.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يحدد نتائج البحث لمواقع الويب ضمن نطاق معين)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Hacking Database Section -->
+        <section id="ghdb" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">3. Google Hacking Database (GHDB)</h2>
+                <p class="text-sm opacity-80">(قاعدة بيانات القرصنة باستخدام جوجل)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">What is the Google Hacking Database (GHDB)?</h3>
+                    <p class="text-sm text-gray-600">(ما هي قاعدة بيانات القرصنة باستخدام جوجل؟)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>The GHDB is an authoritative resource that contains a collection of Google dorks. It leverages the advanced search capabilities of Google to uncover sensitive or hidden information.</p>
+                        <p class="mt-2 text-sm text-gray-600">(GHDB هي مصدر موثوق يحتوي على مجموعة من استعلامات جوجل المتقدمة. تستخدم إمكانيات البحث المتقدمة في جوجل للكشف عن المعلومات الحساسة أو المخفية)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Google Dorks</h3>
+                    <p class="text-sm text-gray-600">(استعلامات جوجل المتقدمة)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Activity 1</h4>
+                            <p><strong>Query:</strong> site:testphp.vulnweb.com inurl:login</p>
+                            <p><strong>Explanation:</strong> Restricts the search to the target domain and searches for pages with "login" in the URL.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يحدد البحث للنطاق الهدف ويبحث عن الصفحات التي تحتوي على "login" في الرابط)</p>
+                            <img src="images/dork1.png" alt="Lecture 2 Image" class="mt-6">
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Activity 2</h4>
+                            <p><strong>Query:</strong> site:testphp.vulnweb.com filetype:pdf</p>
+                            <p><strong>Explanation:</strong> Searches for PDF documents within the target domain.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يبحث عن مستندات PDF ضمن النطاق الهدف)</p>
+                            <img src="images/dork2.png" alt="Lecture 2 Image" class="mt-6">
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-blue-700">Activity 3</h4>
+                            <p><strong>Query:</strong> site:testphp.vulnweb.com intitle:"Index of /"</p>
+                            <p><strong>Explanation:</strong> Finds open directories with directory indexing enabled.</p>
+                            <p class="mt-2 text-sm text-gray-600">(يجد الدلائل المفتوحة مع تفعيل فهرسة الدلائل)</p>
+                            <img src="images/dork3.png" alt="Lecture 2 Image" class="mt-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 mt-20">
+            <div class="container mx-auto max-w-5xl px-4 text-center">
+                <p class="text-lg">© 2024 Ethical Hacking Lab – Lecture 2. All rights reserved.</p>
+                <p class="mt-2 opacity-80">Designed and developed by Eng, Nour sallam</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

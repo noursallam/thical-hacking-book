@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking Lab – Lecture 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: #3b82f6;
+            width: 100%;
+            margin-left: 20px;
+            top: 50%;
+        }
+
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            margin: 20px;
+
+
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 shadow-lg">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h1 class="text-4xl font-bold">Ethical Hacking Lab – Lecture 1</h1>
+            <p class="text-xl mt-2 opacity-90">Eng, Nour sallam</p>
+            <p class="opacity-80">2024-2025</p>
+        </div>
+
+
+        <div class="container mx-auto max-w-5xl px-4 m-7">
+            <a href="lec1.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L01:</span>
+            </a>
+            <a href="lec2.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L02:</span> 
+            </a>
+            <a href="lec3.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L03:</span> 
+                
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 top-0 z-10">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-2xl font-bold text-blue-800">Table of Content</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <a href="#lo1"
+                    class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">LO#01:</span> Explain Information Security Concepts
+                </a>
+                <a href="#lo2"
+                    class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">LO#02:</span> Explain Hacking Methodologies and Frameworks
+                </a>
+                <a href="#lo3"
+                    class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">LO#03:</span> Explain Hacking Concepts and Different
+                    Hacker Classes
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-5xl px-4 py-10">
+        <!-- LO#01 Section -->
+        <section id="lo1" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">LO#01: Explain Information Security Concepts</h2>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title">Elements of Information Security
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Confidentiality</h4>
+                            <p>Ensures that information is accessible only to those who are authorized to have access.
+                            </p>
+                            <p class="mt-2 text-sm text-gray-600">(السرية: ضمان أن المعلومات متاحة فقط لأولئك المصرح لهم
+                                بالوصول إليها)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Integrity</h4>
+                            <p>Maintains the trustworthiness of data or resources, preventing unauthorized or improper
+                                changes.</p>
+                            <p class="mt-2 text-sm text-gray-600">(النزاهة: الحفاظ على مصداقية البيانات أو الموارد، ومنع
+                                التغييرات غير المصرح بها أو غير المناسبة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Availability</h4>
+                            <p>Assures that systems for delivering, storing, and processing information are accessible
+                                when required by authorized users.</p>
+                            <p class="mt-2 text-sm text-gray-600">(التوافر: ضمان أن أنظمة توصيل وتخزين ومعالجة المعلومات
+                                تكون قابلة للوصول عند الحاجة من قبل المستخدمين المصرح لهم)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Authenticity</h4>
+                            <p>Refers to the genuineness of a communication, document, or data.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الأصالة: تشير إلى صحة الاتصال أو المستند أو البيانات)
+                            </p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Non-Repudiation</h4>
+                            <p>Guarantees that a sender cannot deny sending a message and the recipient cannot deny
+                                having received it.</p>
+                            <p class="mt-2 text-sm text-gray-600">(عدم الإنكار: يضمن أن المرسل لا يمكنه إنكار إرسال
+                                الرسالة وأن المستلم لا يمكنه إنكار استلامها)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title">Motives, Goals, and Objectives of
+                        Information Security Attacks</h3>
+                    <div class="card bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                        <h4 class="font-bold text-yellow-700">Formula for an Attack:</h4>
+                        <p class="font-medium">Attacks = Motive (Goal) + Method + Vulnerability</p>
+                        <p class="mt-2 text-sm text-gray-600">(صيغة الهجوم: الهجمات = الدافع (الهدف) + الطريقة + الثغرة)
+                        </p>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="font-bold text-blue-700">Motive</h4>
+                        <p>Arises when the target system stores or processes something valuable, leading to the risk of
+                            an attack.</p>
+                        <p class="mt-2 text-sm text-gray-600">(الدافع: ينشأ عندما يقوم النظام الهدف بتخزين أو معالجة شيء
+                            ذي قيمة، مما يؤدي إلى خطر الهجوم)</p>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li>Disrupting business continuity.</li>
+                            <li>Stealing information and manipulating data.</li>
+                            <li>Creating fear and chaos by disrupting critical infrastructures.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="font-bold text-blue-700">Method</h4>
+                        <p>Attackers utilize tools and techniques to exploit vulnerabilities in the system or its
+                            security controls.</p>
+                        <p class="mt-2 text-sm text-gray-600">(الطريقة: يستخدم المهاجمون أدوات وتقنيات لاستغلال الثغرات
+                            في النظام أو ضوابط الأمان الخاصة به)</p>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="font-bold text-blue-700">Vulnerability</h4>
+                        <p>A weakness in an IT system that can be exploited by an attacker to deliver a successful
+                            attack.</p>
+                        <p class="mt-2 text-sm text-gray-600">(الثغرة: نقطة ضعف في نظام تكنولوجيا المعلومات يمكن للمهاجم
+                            استغلالها لتوجيه هجوم ناجح)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title">Classification of Attacks</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-white p-6 rounded-lg shadow border-t-4 border-red-500">
+                            <h4 class="font-bold text-red-700">1. Passive Attacks</h4>
+                            <p>Involve intercepting and monitoring network traffic without tampering with data.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الهجمات السلبية: تتضمن اعتراض ومراقبة حركة المرور على
+                                الشبكة دون العبث بالبيانات)</p>
+                        </div>
+                        <div class="card bg-white p-6 rounded-lg shadow border-t-4 border-red-500">
+                            <h4 class="font-bold text-red-700">2. Active Attacks</h4>
+                            <p>Tamper with data in transit, disrupt communication, or services between systems.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الهجمات النشطة: العبث بالبيانات أثناء النقل، تعطيل
+                                الاتصال أو الخدمات بين الأنظمة)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LO#02 Section -->
+        <section id="lo2" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">LO#02: Explain Hacking Methodologies and Frameworks</h2>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title">Phases of Hacking</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4">1. Footprinting</h4>
+                            <p>Gathering information about the target.</p>
+                            <p class="mt-2 text-sm text-gray-600">(جمع المعلومات عن الهدف)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4">2. Scanning</h4>
+                            <p>Probing the target system for open ports and vulnerabilities.</p>
+                            <p class="mt-2 text-sm text-gray-600">(فحص النظام الهدف للبحث عن المنافذ المفتوحة والثغرات)
+                            </p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4">3. Enumeration</h4>
+                            <p>Discovering resources and services on the target system.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الحصول على المصدرات والخدمات في نظام الهدف)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4">4. Exploitation</h4>
+                            <p>Exploiting vulnerabilities to gain access to the target system.</p>
+                            <p class="mt-2 text-sm text-gray-600">(التصرف في الثغرات للحصول على الوصول لنظام الهدف)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Next Lecture: <a href="lec2.html" class="text-blue-600 underline">Phases of hacking and the detailed
+                        steps of system hacking [1/2]</a></h3>
+                <h4 class="text-xl font-semibold mt-6">System Hacking Steps</h4>
+                <ol class="list-decimal ml-6 mt-4 space-y-2">
+                    <li><strong>Gaining Access:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Cracking passwords.</li>
+                            <li>Exploiting vulnerabilities.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Escalating Privileges:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Increasing access rights to gain more control over the system.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Maintaining Access:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Executing applications to sustain a presence on the system.</li>
+                            <li>Hiding files to avoid detection.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Clearing Logs:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Covering tracks to erase evidence of intrusion.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4 class="text-xl font-semibold mt-6">Cyber Kill Chain Framework</h4>
+                <p class="mt-2">A framework used for understanding and preventing malicious intrusion activities. It
+                    provides insights into an attacker's tactics, techniques, and procedures.</p>
+                <ol class="list-decimal ml-6 mt-4 space-y-2">
+                    <li><strong>Reconnaissance:</strong> Gathering data about the target to identify weak points.</li>
+                    <li><strong>Weaponization:</strong> Creating a deliverable malicious payload using an exploit and a
+                        backdoor.</li>
+                    <li><strong>Delivery:</strong> Sending the weaponized payload to the victim via email, USB, or other
+                        methods.</li>
+                    <li><strong>Exploitation:</strong> Executing malicious code on the victim’s system to exploit
+                        vulnerabilities.</li>
+                    <li><strong>Installation:</strong> Installing malware or other malicious tools on the target system.
+                    </li>
+                    <li><strong>Command and Control (C2):</strong> Establishing a channel to communicate with the
+                        compromised system and pass data.</li>
+                    <li><strong>Actions on Objectives:</strong> Executing the intended actions, such as stealing data,
+                        disrupting services, or achieving other malicious goals.</li>
+                </ol>
+
+                <img src="images/1.png" alt="Lecture 1 Image" class="mt-6">
+
+                <h4 class="text-xl font-semibold mt-6">Tactics, Techniques, and Procedures (TTPs)</h4>
+                <p class="mt-2">Patterns of activities and methods used by threat actors. TTPs are key to understanding
+                    the behavior of attackers.</p>
+                <ul class="list-disc ml-6 mt-4 space-y-2">
+                    <li><strong>Tactics:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Guidelines that describe how an attacker performs an attack from start to finish.</li>
+                            <li>Includes various tactics for information gathering, initial exploitation, privilege
+                                escalation, lateral movement, and persistent access deployment.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Techniques:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Technical methods used by attackers to achieve specific results during an attack.</li>
+                            <li>Examples include initial exploitation, setting up and maintaining command and control
+                                channels, accessing the target infrastructure, and covering tracks or data exfiltration.
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Procedures:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Organizational approaches threat actors follow to execute an attack.</li>
+                            <li>The number of actions varies based on the goals and objectives of the attackers.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-6">Implications of Hacking</h4>
+                <ul class="list-disc ml-6 mt-4 space-y-2">
+                    <li><strong>Unauthorized Access:</strong> Leads to breaches of sensitive data.</li>
+                    <li><strong>Damage to Applications:</strong> Alteration or misuse of software functionalities.</li>
+                    <li><strong>Business Risks:</strong> Financial loss, reputation damage, or operational disruption.
+                    </li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-6">Who is a Hacker?</h4>
+                <p class="mt-2">A hacker is an intelligent individual with excellent computer skills who can create and
+                    explore computer software, understand and manipulate hardware. Hacking can be a hobby, a test of
+                    skills, or an exploration of how many computers or networks they can compromise.</p>
+                <ul class="list-disc ml-6 mt-4 space-y-2">
+                    <li><strong>Motivations:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Gaining knowledge about systems.</li>
+                            <li>Probing systems for weaknesses.</li>
+                            <li>Engaging in illegal activities such as stealing data.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Malicious Intent:</strong>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Stealing business data, credit card information, or social security numbers.</li>
+                            <li>Obtaining email passwords and other sensitive data.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-6">Hacker Classes</h4>
+                <ul class="list-disc ml-6 mt-4 space-y-2">
+                    <li><strong>Black Hats:</strong> Hackers with extraordinary skills who engage in malicious or
+                        destructive activities. Often referred to as crackers. Intent: Exploitation and harm.</li>
+                    <li><strong>White Hats:</strong> Also known as ethical hackers or security analysts. Use their
+                        skills for defensive purposes with permission from system owners. Intent: Protection and
+                        security.</li>
+                    <li><strong>Gray Hats:</strong> Hackers who operate both offensively and defensively at different
+                        times. Their actions may not always align with the law. Intent: Mixed motives.</li>
+                    <li><strong>Suicide Hackers:</strong> Aim to bring down critical infrastructure for a cause.
+                        Unconcerned about consequences such as imprisonment. Intent: Ideological disruption.</li>
+                    <li><strong>Script Kiddies:</strong> Unskilled hackers relying on pre-written scripts and tools
+                        developed by others. Lack the technical expertise of experienced hackers. Intent: Often for fun
+                        or nuisance.</li>
+                    <li><strong>Cyber Terrorists:</strong> Use hacking to further religious or political agendas. Create
+                        fear by causing large-scale disruptions to networks. Intent: Instill fear and chaos.</li>
+                    <li><strong>State-Sponsored Hackers:</strong> Employed by governments to gain top-secret information
+                        or damage other nations’ systems. Often involved in espionage or cyber warfare. Intent: National
+                        interests.</li>
+                    <li><strong>Hacktivists:</strong> Promote a political agenda using hacking. Activities include
+                        defacing or disabling websites to spread their message. Intent: Advocacy or protest.</li>
+                    <li><strong>Hacker Teams:</strong> Groups of skilled hackers with their own resources and funding.
+                        Work together to research and develop state-of-the-art technologies. Intent: Collaborative
+                        exploration and innovation, sometimes for malicious purposes.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 mt-20">
+            <div class="container mx-auto max-w-5xl px-4 text-center">
+                <p class="text-lg">© 2024 Ethical Hacking Lab – Lecture 1. All rights reserved.</p>
+                <p class="mt-2 opacity-80">Designed and developed by Eng, Nour sallam</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

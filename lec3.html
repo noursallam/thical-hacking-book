@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking Lab – Lecture 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            margin: 20px;
+
+
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 shadow-lg">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h1 class="text-4xl font-bold">Ethical Hacking Lab – Lecture 3</h1>
+            <p class="text-xl mt-2 opacity-90">Eng, Nour sallam</p>
+            <p class="opacity-80">2024-2025</p>
+        </div>
+
+
+        <div class="container mx-auto max-w-5xl px-4 m-7">
+            <a href="lec1.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L01:</span>
+            </a>
+            <a href="lec2.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L02:</span> 
+            </a>
+            <a href="lec3.html"
+                class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                <span class="font-semibold text-blue-700">L03:</span> 
+                
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-2xl font-bold text-blue-800">Table of Content</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <a href="#network-scanning" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">1.</span> Explain Network Scanning Concepts
+                    <p class="text-sm text-gray-600">(شرح مفاهيم مسح الشبكة)</p>
+                </a>
+                <a href="#networking-protocols" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">2.</span> Revision of Networking Protocols
+                    <p class="text-sm text-gray-600">(مراجعة بروتوكولات الشبكة)</p>
+                </a>
+                <a href="#scanning-tools" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">3.</span> Use Various Network Scanning Tools
+                    <p class="text-sm text-gray-600">(استخدام أدوات مسح الشبكة المختلفة)</p>
+                </a>
+                <a href="#host-discovery" class="card bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
+                    <span class="font-semibold text-blue-700">4.</span> Demonstrate Various Scanning Techniques for Host Discovery
+                    <p class="text-sm text-gray-600">(إظهار تقنيات المسح لاكتشاف المضيفين)</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-5xl px-4 py-10">
+        <!-- Network Scanning Section -->
+        <section id="network-scanning" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">1. Explain Network Scanning Concepts</h2>
+                <p class="text-sm opacity-80">(شرح مفاهيم مسح الشبكة)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Overview of Network Scanning</h3>
+                    <p class="text-sm text-gray-600">(نظرة عامة على مسح الشبكة)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Discover Live Hosts</h4>
+                            <p>Identify devices actively connected to the network.</p>
+                            <p class="mt-2 text-sm text-gray-600">(تحديد الأجهزة المتصلة بالشبكة بشكل نشط)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Discover IP Addresses</h4>
+                            <p>Understand the network's address allocation.</p>
+                            <p class="mt-2 text-sm text-gray-600">(فهم تخصيص عناوين IP في الشبكة)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Identify Open Ports and Services</h4>
+                            <p>Reveal services that might be exploitable.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الكشف عن الخدمات التي قد تكون قابلة للاستغلال)</p>
+                        </div>
+                        <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Find Vulnerabilities</h4>
+                            <p>Detect weak configurations or outdated systems.</p>
+                            <p class="mt-2 text-sm text-gray-600">(الكشف عن التكوينات الضعيفة أو الأنظمة القديمة)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">TCP/IP Communication</h3>
+                    <p class="text-sm text-gray-600">(اتصال TCP/IP)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-blue-700">TCP Flags</h4>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li><strong>URG (Urgent):</strong> Data must be processed immediately.</li>
+                            <li><strong>PSH (Push):</strong> Transfers all buffered data immediately.</li>
+                            <li><strong>ACK (Acknowledgment):</strong> Confirms the receipt of data packets.</li>
+                            <li><strong>SYN (Synchronize):</strong> Used to start a connection (handshake).</li>
+                            <li><strong>FIN (Finish):</strong> Closes the connection.</li>
+                            <li><strong>RST (Reset):</strong> Resets a connection if an error occurs.</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-gray-600">(أعلام TCP: URG, PSH, ACK, SYN, FIN, RST)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Three-Way Handshake</h3>
+                    <p class="text-sm text-gray-600">(مصافحة ثلاثية الاتجاهات)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Tcp-handshake.png" alt="Three-Way Handshake" class="w-full rounded-lg mb-4">
+                        <ol class="list-decimal ml-6 mt-2 space-y-2">
+                            <li><strong>Client Sends SYN:</strong> Initiates a connection to a server by sending a SYN packet.</li>
+                            <li><strong>Server Responds with SYN-ACK:</strong> Confirms readiness by sending SYN and ACK packets.</li>
+                            <li><strong>Client Sends ACK:</strong> Acknowledges the server's response, and the connection is established.</li>
+                        </ol>
+                        <p class="mt-2 text-sm text-gray-600">(1. العميل يرسل SYN 2. الخادم يرد بـ SYN-ACK 3. العميل يرسل ACK)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Networking Protocols Section -->
+        <section id="networking-protocols" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">2. Revision of Networking Protocols</h2>
+                <p class="text-sm opacity-80">(مراجعة بروتوكولات الشبكة)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">ARP (Address Resolution Protocol)</h3>
+                    <p class="text-sm text-gray-600">(بروتوكول تحليل العناوين)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>ARP is used to resolve IP addresses to MAC addresses within a local network.</p>
+                        <p class="mt-2 text-sm text-gray-600">(يستخدم ARP لتحويل عناوين IP إلى عناوين MAC داخل الشبكة المحلية)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">ICMP (Internet Control Message Protocol)</h3>
+                    <p class="text-sm text-gray-600">(بروتوكول رسائل التحكم في الإنترنت)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>ICMP is used for diagnostic purposes, such as ping and traceroute.</p>
+                        <p class="mt-2 text-sm text-gray-600">(يستخدم ICMP لأغراض تشخيصية مثل ping و traceroute)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">TCP vs UDP</h3>
+                    <p class="text-sm text-gray-600">(مقارنة بين TCP و UDP)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li><strong>TCP:</strong> Reliable, connection-oriented protocol.</li>
+                            <li><strong>UDP:</strong> Unreliable, connectionless protocol.</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-gray-600">(TCP: موثوق وموجه للاتصال | UDP: غير موثوق وبدون اتصال)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Scanning Tools Section -->
+        <section id="scanning-tools" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">3. Use Various Network Scanning Tools</h2>
+                <p class="text-sm opacity-80">(استخدام أدوات مسح الشبكة المختلفة)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Nmap</h3>
+                    <p class="text-sm text-gray-600">(أداة Nmap)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Nmap is a powerful network scanning tool used for discovering hosts and services on a network.</p>
+                        <p class="mt-2 text-sm text-gray-600">(Nmap هي أداة قوية لمسح الشبكة تستخدم لاكتشاف المضيفين والخدمات على الشبكة)</p>
+                        <img src="https://nmap.org/images/screenhosts-summary.png" alt="Nmap Screenshot" class="w-full rounded-lg mt-4">
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Hping3</h3>
+                    <p class="text-sm text-gray-600">(أداة Hping3)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Hping3 is a network tool used for packet crafting and network testing.</p>
+                        <p class="mt-2 text-sm text-gray-600">(Hping3 هي أداة شبكة تستخدم لإنشاء الحزم واختبار الشبكة)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Metasploit</h3>
+                    <p class="text-sm text-gray-600">(أداة Metasploit)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Metasploit is a penetration testing framework used for exploiting vulnerabilities.</p>
+                        <p class="mt-2 text-sm text-gray-600">(Metasploit هي إطار عمل لاختبار الاختراق يستخدم لاستغلال الثغرات)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Host Discovery Section -->
+        <section id="host-discovery" class="mb-20">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-t-lg">
+                <h2 class="text-2xl font-bold">4. Demonstrate Various Scanning Techniques for Host Discovery</h2>
+                <p class="text-sm opacity-80">(إظهار تقنيات المسح لاكتشاف المضيفين)</p>
+            </div>
+            <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">ARP Ping Scan</h3>
+                    <p class="text-sm text-gray-600">(مسح ARP Ping)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Uses ARP requests to identify active hosts on a local network.</p>
+                        <p class="mt-2 text-sm text-gray-600">(يستخدم طلبات ARP لتحديد المضيفين النشطين على الشبكة المحلية)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">ICMP Ping Scan</h3>
+                    <p class="text-sm text-gray-600">(مسح ICMP Ping)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Sends ICMP Echo requests to determine if a system is active.</p>
+                        <p class="mt-2 text-sm text-gray-600">(يرسل طلبات ICMP Echo لتحديد ما إذا كان النظام نشطًا)</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">TCP SYN Scan</h3>
+                    <p class="text-sm text-gray-600">(مسح TCP SYN)</p>
+                    <div class="card bg-blue-50 p-6 rounded-lg">
+                        <p>Sends SYN packets to check for open ports and active hosts.</p>
+                        <p class="mt-2 text-sm text-gray-600">(يرسل حزم SYN للتحقق من المنافذ المفتوحة والمضيفين النشطين)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 mt-20">
+            <div class="container mx-auto max-w-5xl px-4 text-center">
+                <p class="text-lg">© 2024 Ethical Hacking Lab – Lecture 3. All rights reserved.</p>
+                <p class="mt-2 opacity-80">Designed and developed by Eng, Nour sallam</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
