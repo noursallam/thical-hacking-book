@@ -7,8 +7,10 @@
     <title>Ethical Hacking Lab – Lecture 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 
         body {
             font-family: 'Cairo', sans-serif;
@@ -65,12 +67,12 @@
             </a>
             <a href="lec2.html"
                 class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
-                <span class="font-semibold text-blue-700">L02:</span> 
+                <span class="font-semibold text-blue-700">L02:</span>
             </a>
             <a href="lec3.html"
                 class="card bg-white p-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md">
-                <span class="font-semibold text-blue-700">L03:</span> 
-                
+                <span class="font-semibold text-blue-700">L03:</span>
+
             </a>
         </div>
     </header>
@@ -219,29 +221,38 @@
 
 
 
-
-
             <div class="bg-white rounded-b-lg shadow-lg p-6">
+                <!-- Phases of Hacking Section -->
                 <div class="mb-10">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title">Phases of Hacking</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800 section-title flex items-center">
+                        <i class="fas fa-shield-alt mr-2"></i> Phases of Hacking
+                    </h3>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                        <div class="card bg-blue-50 p-6 rounded-lg">
+                        <!-- Footprinting Card -->
+                        <div class="card bg-blue-50 p-6 rounded-lg flex flex-col items-start">
+                            <i class="fas fa-search text-blue-800 text-2xl mb-4"></i>
                             <h4 class="text-lg font-bold text-blue-800 mb-4">1. Footprinting</h4>
                             <p>Gathering information about the target.</p>
                             <p class="mt-2 text-sm text-gray-600">(جمع المعلومات عن الهدف)</p>
                         </div>
-                        <div class="card bg-blue-50 p-6 rounded-lg">
+                        <!-- Scanning Card -->
+                        <div class="card bg-blue-50 p-6 rounded-lg flex flex-col items-start">
+                            <i class="fas fa-bullseye text-blue-800 text-2xl mb-4"></i>
                             <h4 class="text-lg font-bold text-blue-800 mb-4">2. Scanning</h4>
                             <p>Probing the target system for open ports and vulnerabilities.</p>
                             <p class="mt-2 text-sm text-gray-600">(فحص النظام الهدف للبحث عن المنافذ المفتوحة والثغرات)
                             </p>
                         </div>
-                        <div class="card bg-blue-50 p-6 rounded-lg">
+                        <!-- Enumeration Card -->
+                        <div class="card bg-blue-50 p-6 rounded-lg flex flex-col items-start">
+                            <i class="fas fa-list-ol text-blue-800 text-2xl mb-4"></i>
                             <h4 class="text-lg font-bold text-blue-800 mb-4">3. Enumeration</h4>
                             <p>Discovering resources and services on the target system.</p>
                             <p class="mt-2 text-sm text-gray-600">(الحصول على المصدرات والخدمات في نظام الهدف)</p>
                         </div>
-                        <div class="card bg-blue-50 p-6 rounded-lg">
+                        <!-- Exploitation Card -->
+                        <div class="card bg-blue-50 p-6 rounded-lg flex flex-col items-start">
+                            <i class="fas fa-bug text-blue-800 text-2xl mb-4"></i>
                             <h4 class="text-lg font-bold text-blue-800 mb-4">4. Exploitation</h4>
                             <p>Exploiting vulnerabilities to gain access to the target system.</p>
                             <p class="mt-2 text-sm text-gray-600">(التصرف في الثغرات للحصول على الوصول لنظام الهدف)</p>
@@ -249,134 +260,178 @@
                     </div>
                 </div>
 
-                <h3>Next Lecture: <a href="lec2.html" class="text-blue-600 underline">Phases of hacking and the detailed
-                        steps of system hacking [1/2]</a></h3>
-                <h4 class="text-xl font-semibold mt-6">System Hacking Steps</h4>
+                <!-- Next Lecture Link -->
+                <h3 class="flex items-center">
+                    <i class="fas fa-arrow-right mr-2"></i> Next Lecture:
+                    <a href="lec2.html" class="text-blue-600 underline">Phases of hacking and the detailed steps of
+                        system hacking [1/2]</a>
+                </h3>
+
+                <!-- System Hacking Steps Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-laptop-code mr-2"></i> System Hacking Steps
+                </h4>
                 <ol class="list-decimal ml-6 mt-4 space-y-2">
                     <li><strong>Gaining Access:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Cracking passwords.</li>
-                            <li>Exploiting vulnerabilities.</li>
+                            <li>Cracking passwords. (اختراق كلمات المرور)</li>
+                            <li>Exploiting vulnerabilities. (استغلال الثغرات)</li>
                         </ul>
                     </li>
                     <li><strong>Escalating Privileges:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Increasing access rights to gain more control over the system.</li>
+                            <li>Increasing access rights to gain more control over the system. (زيادة صلاحيات الوصول
+                                للتحكم في النظام)</li>
                         </ul>
                     </li>
                     <li><strong>Maintaining Access:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Executing applications to sustain a presence on the system.</li>
-                            <li>Hiding files to avoid detection.</li>
+                            <li>Executing applications to sustain a presence on the system. (تنفيذ التطبيقات للبقاء في
+                                النظام)</li>
+                            <li>Hiding files to avoid detection. (إخفاء الملفات لتجنب الاكتشاف)</li>
                         </ul>
                     </li>
                     <li><strong>Clearing Logs:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Covering tracks to erase evidence of intrusion.</li>
+                            <li>Covering tracks to erase evidence of intrusion. (إزالة الأدلة على الاختراق)</li>
                         </ul>
                     </li>
                 </ol>
 
-                <h4 class="text-xl font-semibold mt-6">Cyber Kill Chain Framework</h4>
+                <!-- Cyber Kill Chain Framework Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-link mr-2"></i> Cyber Kill Chain Framework
+                </h4>
                 <p class="mt-2">A framework used for understanding and preventing malicious intrusion activities. It
                     provides insights into an attacker's tactics, techniques, and procedures.</p>
                 <ol class="list-decimal ml-6 mt-4 space-y-2">
-                    <li><strong>Reconnaissance:</strong> Gathering data about the target to identify weak points.</li>
+                    <li><strong>Reconnaissance:</strong> Gathering data about the target to identify weak points. (جمع
+                        البيانات عن الهدف لتحديد النقاط الضعيفة)</li>
                     <li><strong>Weaponization:</strong> Creating a deliverable malicious payload using an exploit and a
-                        backdoor.</li>
+                        backdoor. (إنشاء حمولة ضارة باستخدام ثغرة وباب خلفي)</li>
                     <li><strong>Delivery:</strong> Sending the weaponized payload to the victim via email, USB, or other
-                        methods.</li>
+                        methods. (إرسال الحمولة الضارة إلى الضحية عبر البريد الإلكتروني أو USB)</li>
                     <li><strong>Exploitation:</strong> Executing malicious code on the victim’s system to exploit
-                        vulnerabilities.</li>
+                        vulnerabilities. (تنفيذ التعليمات البرمجية الضارة على نظام الضحية)</li>
                     <li><strong>Installation:</strong> Installing malware or other malicious tools on the target system.
-                    </li>
+                        (تثبيت البرامج الضارة على النظام الهدف)</li>
                     <li><strong>Command and Control (C2):</strong> Establishing a channel to communicate with the
-                        compromised system and pass data.</li>
+                        compromised system and pass data. (إنشاء قناة للتواصل مع النظام المخترق)</li>
                     <li><strong>Actions on Objectives:</strong> Executing the intended actions, such as stealing data,
-                        disrupting services, or achieving other malicious goals.</li>
+                        disrupting services, or achieving other malicious goals. (تنفيذ الإجراءات المخطط لها مثل سرقة
+                        البيانات أو تعطيل الخدمات)</li>
                 </ol>
 
+                <!-- Image Section -->
                 <img src="images/1.png" alt="Lecture 1 Image" class="mt-6">
 
-                <h4 class="text-xl font-semibold mt-6">Tactics, Techniques, and Procedures (TTPs)</h4>
+                <!-- TTPs Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-tools mr-2"></i> Tactics, Techniques, and Procedures (TTPs)
+                </h4>
                 <p class="mt-2">Patterns of activities and methods used by threat actors. TTPs are key to understanding
                     the behavior of attackers.</p>
                 <ul class="list-disc ml-6 mt-4 space-y-2">
                     <li><strong>Tactics:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Guidelines that describe how an attacker performs an attack from start to finish.</li>
+                            <li>Guidelines that describe how an attacker performs an attack from start to finish.
+                                (إرشادات تصف كيفية تنفيذ الهجوم)</li>
                             <li>Includes various tactics for information gathering, initial exploitation, privilege
-                                escalation, lateral movement, and persistent access deployment.</li>
+                                escalation, lateral movement, and persistent access deployment. (يشمل تكتيكات لجمع
+                                المعلومات واستغلال الثغرات)</li>
                         </ul>
                     </li>
                     <li><strong>Techniques:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Technical methods used by attackers to achieve specific results during an attack.</li>
+                            <li>Technical methods used by attackers to achieve specific results during an attack.
+                                (الأساليب التقنية المستخدمة لتحقيق نتائج محددة)</li>
                             <li>Examples include initial exploitation, setting up and maintaining command and control
                                 channels, accessing the target infrastructure, and covering tracks or data exfiltration.
-                            </li>
+                                (مثل استغلال الثغرات وإخفاء الأدلة)</li>
                         </ul>
                     </li>
                     <li><strong>Procedures:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Organizational approaches threat actors follow to execute an attack.</li>
-                            <li>The number of actions varies based on the goals and objectives of the attackers.</li>
+                            <li>Organizational approaches threat actors follow to execute an attack. (الأساليب التنظيمية
+                                لتنفيذ الهجوم)</li>
+                            <li>The number of actions varies based on the goals and objectives of the attackers. (يختلف
+                                عدد الإجراءات بناءً على أهداف المهاجمين)</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h4 class="text-xl font-semibold mt-6">Implications of Hacking</h4>
+                <!-- Implications of Hacking Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-exclamation-triangle mr-2"></i> Implications of Hacking
+                </h4>
                 <ul class="list-disc ml-6 mt-4 space-y-2">
-                    <li><strong>Unauthorized Access:</strong> Leads to breaches of sensitive data.</li>
-                    <li><strong>Damage to Applications:</strong> Alteration or misuse of software functionalities.</li>
+                    <li><strong>Unauthorized Access:</strong> Leads to breaches of sensitive data. (يؤدي إلى اختراق
+                        البيانات الحساسة)</li>
+                    <li><strong>Damage to Applications:</strong> Alteration or misuse of software functionalities.
+                        (تغيير أو إساءة استخدام وظائف البرمجيات)</li>
                     <li><strong>Business Risks:</strong> Financial loss, reputation damage, or operational disruption.
-                    </li>
+                        (خسائر مالية أو تلف السمعة أو تعطيل العمليات)</li>
                 </ul>
 
-                <h4 class="text-xl font-semibold mt-6">Who is a Hacker?</h4>
+                <!-- Who is a Hacker? Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-user-secret mr-2"></i> Who is a Hacker?
+                </h4>
                 <p class="mt-2">A hacker is an intelligent individual with excellent computer skills who can create and
                     explore computer software, understand and manipulate hardware. Hacking can be a hobby, a test of
                     skills, or an exploration of how many computers or networks they can compromise.</p>
                 <ul class="list-disc ml-6 mt-4 space-y-2">
                     <li><strong>Motivations:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Gaining knowledge about systems.</li>
-                            <li>Probing systems for weaknesses.</li>
-                            <li>Engaging in illegal activities such as stealing data.</li>
+                            <li>Gaining knowledge about systems. (اكتساب المعرفة حول الأنظمة)</li>
+                            <li>Probing systems for weaknesses. (فحص الأنظمة للبحث عن نقاط الضعف)</li>
+                            <li>Engaging in illegal activities such as stealing data. (الانخراط في أنشطة غير قانونية مثل
+                                سرقة البيانات)</li>
                         </ul>
                     </li>
                     <li><strong>Malicious Intent:</strong>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Stealing business data, credit card information, or social security numbers.</li>
-                            <li>Obtaining email passwords and other sensitive data.</li>
+                            <li>Stealing business data, credit card information, or social security numbers. (سرقة
+                                بيانات الأعمال أو معلومات البطاقات الائتمانية)</li>
+                            <li>Obtaining email passwords and other sensitive data. (الحصول على كلمات مرور البريد
+                                الإلكتروني)</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h4 class="text-xl font-semibold mt-6">Hacker Classes</h4>
+                <!-- Hacker Classes Section -->
+                <h4 class="text-xl font-semibold mt-6 flex items-center">
+                    <i class="fas fa-users mr-2"></i> Hacker Classes
+                </h4>
                 <ul class="list-disc ml-6 mt-4 space-y-2">
                     <li><strong>Black Hats:</strong> Hackers with extraordinary skills who engage in malicious or
-                        destructive activities. Often referred to as crackers. Intent: Exploitation and harm.</li>
+                        destructive activities. Often referred to as crackers. Intent: Exploitation and harm. (القراصنة
+                        ذوو المهارات الاستثنائية الذين ينخرطون في أنشطة ضارة)</li>
                     <li><strong>White Hats:</strong> Also known as ethical hackers or security analysts. Use their
                         skills for defensive purposes with permission from system owners. Intent: Protection and
-                        security.</li>
+                        security. (القراصنة الأخلاقيون الذين يستخدمون مهاراتهم لأغراض دفاعية)</li>
                     <li><strong>Gray Hats:</strong> Hackers who operate both offensively and defensively at different
-                        times. Their actions may not always align with the law. Intent: Mixed motives.</li>
+                        times. Their actions may not always align with the law. Intent: Mixed motives. (القراصنة الذين
+                        يعملون بشكل هجومي ودفاعي)</li>
                     <li><strong>Suicide Hackers:</strong> Aim to bring down critical infrastructure for a cause.
-                        Unconcerned about consequences such as imprisonment. Intent: Ideological disruption.</li>
+                        Unconcerned about consequences such as imprisonment. Intent: Ideological disruption. (القراصنة
+                        الذين يهدفون إلى تعطيل البنية التحتية لأسباب أيديولوجية)</li>
                     <li><strong>Script Kiddies:</strong> Unskilled hackers relying on pre-written scripts and tools
                         developed by others. Lack the technical expertise of experienced hackers. Intent: Often for fun
-                        or nuisance.</li>
+                        or nuisance. (القراصنة عديمو الخبرة الذين يعتمدون على أدوات جاهزة)</li>
                     <li><strong>Cyber Terrorists:</strong> Use hacking to further religious or political agendas. Create
-                        fear by causing large-scale disruptions to networks. Intent: Instill fear and chaos.</li>
+                        fear by causing large-scale disruptions to networks. Intent: Instill fear and chaos. (القراصنة
+                        الذين يستخدمون الاختراق لتعزيز أجندات سياسية أو دينية)</li>
                     <li><strong>State-Sponsored Hackers:</strong> Employed by governments to gain top-secret information
                         or damage other nations’ systems. Often involved in espionage or cyber warfare. Intent: National
-                        interests.</li>
+                        interests. (القراصنة المدعومون من الدولة لأغراض التجسس)</li>
                     <li><strong>Hacktivists:</strong> Promote a political agenda using hacking. Activities include
-                        defacing or disabling websites to spread their message. Intent: Advocacy or protest.</li>
+                        defacing or disabling websites to spread their message. Intent: Advocacy or protest. (القراصنة
+                        الذين ينشرون رسائل سياسية)</li>
                     <li><strong>Hacker Teams:</strong> Groups of skilled hackers with their own resources and funding.
                         Work together to research and develop state-of-the-art technologies. Intent: Collaborative
-                        exploration and innovation, sometimes for malicious purposes.</li>
+                        exploration and innovation, sometimes for malicious purposes. (فرق القراصنة التي تعمل معًا
+                        لأغراض بحثية أو ضارة)</li>
                 </ul>
             </div>
 
