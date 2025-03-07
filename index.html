@@ -5,30 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethical Hacking Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <style>
         body {
-            font-family: 'Cairo', sans-serif;
-            color: #1a1a1a;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e5e7eb; /* Light text for contrast */
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
         .start-button {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #4b6bfb;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
         }
         .start-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #3b58d7; /* Darker blue for hover effect */
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            max-width: 800px;
+            background-color: #1f2937; /* Dark card background */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 60px;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #a3bffa; /* Soft blue for title */
+            text-align: center;
+        }
+        .description {
+            font-size: 1.2rem;
+            color: #d1d5db; /* Light gray text */
+            opacity: 0.85;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .security-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            background-color: #4b6bfb; /* Circular blue background */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quote {
+            font-size: 1.2rem;
+            color: #d1d5db;
+            margin-top: 40px;
+            font-style: italic;
+        }
+        .quote span {
+            font-weight: bold;
+            color: #a3bffa;
+        }
+        .quote-container {
+            margin-top: 40px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-r from-blue-600 to-blue-800 min-h-screen flex items-center justify-center">
-    <!-- Main Content -->
-    <div class="text-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Ethical Hacking Lab</h1>
-        <p class="text-xl md:text-2xl text-white opacity-90 mb-8">Learn the art of ethical hacking with Eng, Nour sallam</p>
-        <a href="lec1.html" class="start-button inline-block bg-white text-blue-800 px-8 py-4 rounded-lg text-xl font-semibold hover:bg-blue-50 transition-all">
-            Start Learning
-        </a>
+<body>
+
+<div class="flex justify-center items-center min-h-screen">
+    <div class="card">
+        <div class="security-icon">
+            <span class="iconify" data-icon="ic:round-security" style="font-size: 30px;"></span>
+        </div>
+        <h1 class="title mb-4">Ethical Hacking Lab</h1>
+        <p class="description">Join Eng. Nour Sallam in exploring the world of ethical hacking and cybersecurity. Start learning now!</p>
+        <a href="lec1.html" class="start-button">Start Learning</a>
+
+        <div class="quote-container">
+
+            <p class="quote text-xl">
+                <span>“وَقُلْ رَبِّ زِدْنِي عِلْمًا”</span><br>
+                (سورة طه: 114)
+            </p>
+        </div>
     </div>
+</div>
+
 </body>
 </html>
